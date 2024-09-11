@@ -7,7 +7,7 @@
   </head>
   <body style="text-align: center">
     <canvas id="unity-canvas" width=960 height=600 style="width: 960px; height: 600px; background: #231F20"></canvas>
-    <script src="Build/catbuild_08.15b.loader.js"></script>
+    <script src="Build/catbuild_0910d.loader.js"></script>
     <script>
       if (/iPhone|iPad|iPod|Android/i.test(navigator.userAgent)) {
         // Mobile device style: fill the whole browser client area with the game canvas:
@@ -18,9 +18,9 @@
       }
 
       createUnityInstance(document.querySelector("#unity-canvas"), {
-        dataUrl: "Build/catbuild_08.15b.data.unityweb",
-        frameworkUrl: "Build/catbuild_08.15b.framework.js.unityweb",
-        codeUrl: "Build/catbuild_08.15b.wasm.unityweb",
+        dataUrl: "Build/catbuild_0910d.data.unityweb",
+        frameworkUrl: "Build/catbuild_0910d.framework.js.unityweb",
+        codeUrl: "Build/catbuild_0910d.wasm.unityweb",
         streamingAssetsUrl: "StreamingAssets",
         companyName: "Audio Games Labs",
         productName: "Super Paulino",
