@@ -64,7 +64,7 @@
 <body>
     <img src = "logo.png" class = "center">
     <ul id="itemList">
-        <li class="item" data-index="0" data-url="/sp/index.html" data-description="Genres: Platformer. Adapted by Scott Smallwood from the game Super Sparty Bros, originally created by Brian Winn and Greg Kozma at Michigan State University, this game imagines the genre hero as a sound collector. The game was designed with the idea that students could each create their own set of sounds for each level, exercising and demonstrating both sound design and compositional skills in a variety of styles. As Super Paulino collects notes, she turns on sounds that are part of a multipart composition, unlocking sonic layers that come together at the end of each level.<br />Created by: Scott Smallwood<br />Additional level design, programming: Catherine Bevan<br />Level 1 audio: XiMe Experimental Ensemble<br />Level 2 audio: Greg Mulyk<br />Level 3 audio: Colin D'Amore<br />Level 4 audio: Jasper Casavant<br />Level 5 audio: Tom Merklinger<br />Level 6 audio: Olivia McRobbie<br />Level 7 audio: Micah Hussel<br />Level 8 audio: Catherine Labbe<br />">
+        <li class="item" data-index="0" data-url="/sp/index.html" data-description="Genres: Platformer. Adapted by Scott Smallwood from the game Su<br>per Sparty Bros, originally created by Brian Winn and Greg Kozma at Michigan State University, this game imagines the genre hero as a sound collector. The game was designed with the idea that students could each create their own set of sounds for each level, exercising and demonstrating both sound design and compositional skills in a variety of styles. As Super Paulino collects notes, she turns on sounds that are part of a multipart composition, unlocking sonic layers that come together at the end of each level.">
             <img src="https://www.audiogameslab.ca/wp-content/uploads/2024/06/paulino.png" alt="Super Paulino"> Super Paulino
         </li>
         <li class="item" data-index="1" data-url="" data-description="Keep your eyes (and ears) peeled!">
@@ -87,7 +87,7 @@
                     }
                 });
                 const descriptionElement = document.getElementById('description');
-                descriptionElement.innerText = currentFocusIndex >= 0 ? items[currentFocusIndex].getAttribute('data-description') : 'None';
+                descriptionElement.innerText = currentFocusIndex >= 0 ? items[currentFocusIndex].getAttribute('data-description') : '';
             };
 
             document.addEventListener('keydown', (event) => {
