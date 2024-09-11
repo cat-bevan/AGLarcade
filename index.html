@@ -14,7 +14,7 @@
             font-style: normal;
             justify-content: center;
             align-items: center;
-            background-color: rgb(126, 26, 156);
+            background-color: rgb(0, 0, 0);
             color: #ccc;
         }
         div {
@@ -64,20 +64,11 @@
 <body>
     <img src = "logo.png" class = "center">
     <ul id="itemList">
-        <li class="item" data-index="0" data-url="/sp/index.html" data-description="Genres: Platformer. On God, have i fixed it? maybe... Adapted by Scott Smallwood from the game Super Sparty Bros, originally created by Brian Winn and Greg Kozma at Michigan State University, this game imagines the genre hero as a sound collector. The game was designed with the idea that students could each create their own set of sounds for each level, exercising and demonstrating both sound design and compositional skills in a variety of styles. As Super Paulino collects notes, she turns on sounds that are part of a multipart composition, unlocking sonic layers that come together at the end of each level.">
+        <li class="item" data-index="0" data-url="/sp/index.html" data-description="Genres: Platformer. Adapted by Scott Smallwood from the game Super Sparty Bros, originally created by Brian Winn and Greg Kozma at Michigan State University, this game imagines the genre hero as a sound collector. The game was designed with the idea that students could each create their own set of sounds for each level, exercising and demonstrating both sound design and compositional skills in a variety of styles. As Super Paulino collects notes, she turns on sounds that are part of a multipart composition, unlocking sonic layers that come together at the end of each level.<br />Created by: Scott Smallwood<br />Additional level design, programming: Catherine Bevan<br />Level 1 audio: XiMe Experimental Ensemble<br />Level 2 audio: Greg Mulyk<br />Level 3 audio: Colin D'Amore<br />Level 4 audio: Jasper Casavant<br />Level 5 audio: Tom Merklinger<br />Level 6 audio: Olivia McRobbie<br />Level 7 audio: Micah Hussel<br />Level 8 audio: Catherine Labbe<br />">
             <img src="https://www.audiogameslab.ca/wp-content/uploads/2024/06/paulino.png" alt="Super Paulino"> Super Paulino
         </li>
-        <li class="item" data-index="1" data-url="https://example.com/page2" data-description="ok? Created by MMus student David Morissette, this short puzzle game was made for a sound-based game jam in early 2024. In it, you play as an invisible character navigating a maze using only sound cues for information on your location. Running into walls will play a harsh, disappointing sound to let you know that you’ve done so, so use this info to try and figure out where you are. Collecting keys will open the doors, and going through the doors will move you to the next level. Give your brain a little workout!">
-            <img src="https://www.audiogameslab.ca/wp-content/uploads/2024/06/self-discovery.png" alt="Self Discovery"> Self Discovery
-        </li>
-        <li class="item" data-index="2" data-url="https://example.com/page3" data-description="eeeee An audio album by the band Evidence, featuring music from The Tank in Colorado. Traverse mazes through listening.">
-            <img src="https://www.audiogameslab.ca/wp-content/uploads/2024/06/thewayin.png" alt="The Way In"> The Way In
-        </li>
-        <li class="item" data-index="3" data-url="https://example.com/page4" data-description="Sync or Swim began life as an installation that is also a simple listening game, and now exists as a downloadable game for several platforms. The idea is simply to listen very carefully to the repetitive textures and move the knob (using buttons in the software version of the game) until you hear the pattern repeating exactly (i.e. nothing is out of sync). Once you find the sync point, the game will “bloom” into a drone, which crescendos and drops you into a new level, with a new and more complex pattern. If you reach level eight, you get a nice little sonic surprise.">
-            <img src="https://www.audiogameslab.ca/wp-content/uploads/2024/06/syncorswim.png" alt="Sync or Swim"> Sync or Swim
-        </li>
-        <li class="item" data-index="4" data-url="https://example.com/page5" data-description="A first-person audio puzzle game that features sonic exploration in an abandoned underground urban environment. As a stranger here, the player explores the soundscape of a world cut off from nature, perhaps a future us, by interacting with sonic puzzles that open doors to new areas, and, ultimately, the lost garden. Through listening and interacting with sounds, players are encouraged to consider the fragile nature of our natural soundscapes, and to speculate on what the story might be for the abandoned game world. As puzzles are solved, clues are revealed, and doors to new areas are opened, ultimately leading the perceptive player outdoors, to the lost (last?) garden.">
-            <img src="https://www.audiogameslab.ca/wp-content/uploads/2024/06/LostGarden_Icon_sm.png" alt="The Lost Garden"> The Lost Garden
+        <li class="item" data-index="1" data-url="" data-description="Keep your eyes (and ears) peeled!">
+            <img src="https://www.audiogameslab.ca/wp-content/uploads/2024/06/self-discovery.png" alt="More Games Coming Soon"> More Games Coming Soon...
         </li>
     </ul>
     <p id="description" class="center">None</p>
@@ -100,13 +91,13 @@
             };
 
             document.addEventListener('keydown', (event) => {
-                if(event.key === 'ArrowRight') {
+                if(event.key === 'ArrowRight' || event.key === 'd') {
                     currentFocusIndex = (currentFocusIndex + 1) % items.length;
                     updateFocus();
-                } else if(event.key === 'ArrowLeft') {
+                } else if(event.key === 'ArrowLeft' || event.key === 'a') {
                     currentFocusIndex = (currentFocusIndex - 1 + items.length) % items.length;
                     updateFocus();
-                } else if(event.key === 'Enter') {
+                } else if(event.key === 'Enter' || event.code === 'Space') {
                     if (currentFocusIndex >= 0) {
                         const url = items[currentFocusIndex].getAttribute('data-url');
                         window.open(url, '_self');
